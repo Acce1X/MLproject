@@ -9,9 +9,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import PolynomialFeatures
 
-df = pd.read_csv('./dataset.csv')
+df = pd.read_csv('./dataset.csv',header = 0)
 data = df.values
-x = data[:,1:99]
+x = data[:,1:100]
 y = data[:,-1].astype(int)
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=.3)
 poly100_kernel_svm_clf = Pipeline([
