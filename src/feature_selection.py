@@ -68,7 +68,7 @@ def chi2(fq,sum_p,sum_n):
     result = sorted(chi,key = lambda x:chi[x],reverse=True)
     return result,chi
     
-df = pd.read_csv("data.csv",header=0,encoding='utf-8',dtype = str)
+df = pd.read_csv("raw_data.csv",header=0,encoding='utf-8',dtype = str)
 df = df.drop(['Id','过敏史','希望得到的帮助','患病时长','就诊科室','用药情况','链接','既往史'],axis = 1)
 stopwords = [line.strip() for line in open('./stopwords/中文停用词表.txt',encoding='UTF-8').readlines()]
 illness_tag = {'胃炎':1,'胃癌':2,'肠胃炎':3,'慢性前变性胃炎':4,'慢性胃炎':5}
