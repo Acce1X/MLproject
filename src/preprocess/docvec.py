@@ -18,6 +18,7 @@ vecs = np.zeros((1,vec_dimension))
 
 for index,row in df.iterrows():
     words = row[1].split(' ')
+    words = 
     vec = np.zeros((1,vec_dimension))
     cnt = 0
     for word in words:
@@ -32,6 +33,6 @@ vecs = np.delete(vecs,0,axis = 0)
 
 df1 = pd.DataFrame(vecs)
 dataset = pd.concat([df1,df['tag']],axis = 1)
-dataset.to_csv('./data/dataset.csv')
+dataset.to_csv('./data/dataset_phrase.csv')
 
 

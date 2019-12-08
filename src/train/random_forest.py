@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics
 
 
-df = pd.read_csv('./dataset.csv',header = 0)
+df = pd.read_csv('./data/dataset_phrase.csv',header = 0)
 #df = pd.read_csv('./dataset_idf.csv',header = 0)#准确率更低了。。。
 data = df.values
 x = data[:,1:100]

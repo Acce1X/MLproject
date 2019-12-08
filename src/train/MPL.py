@@ -7,7 +7,7 @@ from sklearn import metrics
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 
-df = pd.read_csv('./dataset.csv',header = 0)
+df = pd.read_csv('./data/dataset_phrase.csv',header = 0)
 #df = pd.read_csv('./dataset_idf.csv',header = 0)#准确率更低了。。。
 data = df.values
 x = data[:,1:100]
