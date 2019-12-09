@@ -16,12 +16,13 @@ from sklearn.manifold import TSNE
 vec_dimension = 200
 model = word2vec.Word2Vec.load('./data/vec_phrase_with_stopwords.model')
 
-txt_path = '/Users/lichuanhan/Codes/MLProject/data/word_with_stopwords.txt'
+import os
+txt_path = os.getcwd() +'/data/word_with_stopwords.txt'
 sentences = LineSentence(datapath(txt_path))
 
 stopwords = [line.strip() for line in open('./stopwords/中文停用词表.txt',encoding='UTF-8').readlines()]
 phrases = Phrases.load('./data/phraser.pkl')
-df = pd.read_csv('./data/word_with_stopwords.csv',header=0,encoding='utf-8',dtype = str)
+df = pd.read_csv('./data/tag.csv',header=0,encoding='utf-8',dtype = str)
 
 doc_vecs = np.zeros((1,vec_dimension))
 for sentence in sentences:
