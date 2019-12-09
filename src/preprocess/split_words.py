@@ -34,7 +34,7 @@ df.drop(['疾病分类'],axis = 1)
 word_frame = []
 word_set = set()
 
-word_file = open('./data/word.txt','w')
+word_file = open('./data/word_with_stopwords.txt','w')
 
 for index,row in df.iterrows():
     row_text = ""
@@ -46,8 +46,8 @@ for index,row in df.iterrows():
     valid_words = []
     
     for word in words:
-        if word not in stopwords:
-            valid_words.append(word)        
+        #if word not in stopwords:
+        valid_words.append(word)        
     word_file.write(' '.join(valid_words)+'\n')
     #word_frame.append(' '.join(valid_words))
 

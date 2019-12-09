@@ -7,7 +7,7 @@ import random
 from gensim.models import word2vec 
 from sklearn.manifold import TSNE 
 
-model = word2vec.Word2Vec.load('./data/vec.model')
+model = word2vec.Word2Vec.load('./data/vec_phrase.model')
 
 #df = pd.read_csv('./test.csv',header=0,encoding='utf-8',dtype = str)
 

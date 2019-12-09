@@ -9,7 +9,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn import metrics
 
 vec_dimension = 200
-df = pd.read_csv('./data/dataset_phrase.csv',header = 0)
+df = pd.read_csv('./data/dataset_phrase_with_stopwords.csv',header = 0)
 #df = pd.read_csv('./data/dataset_idf.csv',header = 0)#准确率更低了。。。
 data = df.values
 x = data[:,1:vec_dimension]
