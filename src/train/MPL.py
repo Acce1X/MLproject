@@ -23,7 +23,6 @@ y = data[:,-1].astype(int)
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=.3)
 
 clf = MLPClassifier(solver='lbfgs',activation='identity',hidden_layer_sizes=(40),alpha=1e-5)  
-# 神经网络输入为2，第一隐藏层神经元个数为5，第二隐藏层神经元个数为2，输出结果为2分类。
 clf.fit(x_train, y_train)
 
 
